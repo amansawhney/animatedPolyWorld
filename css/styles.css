@@ -1,0 +1,13 @@
+.background {
+    background: url("../img/background/Cheesy Moon Sky.png") no-repeat;
+    width: 100%;
+    height: 100%;
+    animation: day alternate 15s infinite;
+}
+
+@keyframes day {
+    0% {background: url("../img/background/Cheesy Moon Sky.png") no-repeat;}
+    50%{background: url("../img/background/Sunny Sky.png") no-repeat;}
+}
+
+
