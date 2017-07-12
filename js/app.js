@@ -2,11 +2,11 @@
  * Created by amansawhney on 7/12/17.
  */
 
-var bouncingBall = anime({
+var spaceObject = anime({
     targets: '.spaceObject',
     translateY: '20vh',
     duration: 1500,
-    delay: 2400,
+    delay: 2250,
     loop: true,
     direction: 'alternate',
     easing: 'easeInOutCubic'
@@ -20,8 +20,8 @@ var motionPath = anime({
     translateY: path('y'),
     rotate: path('angle'),
     easing: 'easeOutCubic',
-    delay: 20000,
-    duration: 4500,
+    delay: 25000,
+    duration: 5000,
     direction: 'reverse',
     loop: true
 });
@@ -29,15 +29,17 @@ var motionPath = anime({
 
 var duration = anime({
     targets: '#dummy .el',
-    translateX: 1700,
+    translateX: 2100,
     delay: 10000,
     duration: 9000,
     easing: 'linear',
-    direction: 'alternate',
+    direction: 'normal',
     loop: true,
     rotate: 540
 
 });
+
+
 
 
 // var bird = anime({

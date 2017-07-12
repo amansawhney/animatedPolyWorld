@@ -198,13 +198,34 @@ svg {
 }
 
 
-.ball {
-    height: 200px;
-    width: 200px;
+.leftCloud {
+    background: url("../img/cloud/Cloud Medium Night.png") no-repeat;
     position: absolute;
-    top: 20px;
-    bottom: 0;
-    left: calc(50% - 100px);
-    background-color: darkblue;
-    border-radius: 50%;
+    width: 40%;
+    left: -10%;
+    height: 0;
+    padding-bottom: 50%;
+    animation: cloud 7.5s infinite alternate,
+               moveCloudLeft 1s ease-in;
+}
+
+@keyframes moveCloudLeft {
+    0% {left: -40%}
+    100% {left: -10%}
+
+}
+
+@keyframes cloud {
+    0% {
+    }
+    20% {
+        background-image: url("../img/cloud/Cloud Medium Night.png")
+    }
+    50% {
+    }
+    80% {
+        background-image: url("../img/cloud/Cloud Medium Day.png");
+    }
+    100% {
+        background-image: url("../img/cloud/Cloud Medium Day.png")}
 }
