@@ -1,3 +1,5 @@
+html, body { height: 100%; }
+
 .vertical-center {
     min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
     min-height: 100vh; /* These two lines are counted as one :-)       */
@@ -29,7 +31,7 @@
     background-size: 100%;
     width: 1024px;
     height: 520px;
-    animation: day alternate 15s infinite;
+    animation: day alternate 7.5s infinite;
 }
 
 @keyframes day {
@@ -119,12 +121,13 @@
 @keyframes ground {
     0% {}
     25% {
-        background-image: url("../img/background/Ground Base Night.png")
+        background-image: url("../img/background/Ground Base Night.png");
     }
     50% {}
     75% {
         background-image: url("../img/background/Ground Base Day.png");
     }
     100% {
-        background-image: url("../img/background/Ground Base Day.png")}
+        background-image: url("../img/background/Ground Base Day.png");
+    }
 }
