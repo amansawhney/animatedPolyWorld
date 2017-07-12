@@ -60,30 +60,28 @@ html, body {
     background-size: 100%;
     opacity: .9;
     animation:
-        glow 2s infinite alternate ease-in-out,
-        move 7.5s infinite alternate ease-in-out;
+            glow 2s infinite alternate ease-in-out,
+            move 7.5s infinite alternate ease-in-out;
 
 }
 
 /*@keyframes glow {*/
-    /*0% {opacity: 1;}*/
-    /*100% {opacity: .85;}*/
+/*0% {opacity: 1;}*/
+/*100% {opacity: .85;}*/
 /*}*/
 
 @keyframes move {
     0% {
-        transform: translateY(0%);
     }
-    25% {transform: translateY(0%);
+    25% {
         background-image: url("../img/background/White Moon.png")
     }
     50% {
-        transform: translateY(75%);
     }
-    75% {transform: translateY(0%);
+    75% {
         background-image: url("../img/background/Sun.png");
     }
-    100% {transform: translateY(0%);
+    100% {
         background-image: url("../img/background/Sun.png")}
 }
 
@@ -151,4 +149,62 @@ html, body {
     100% {
         background-image: url("../img/background/Ground Base Day.png");
     }
+}
+
+.bird {
+    background: url("../img/bird/Blue Bird Wings UP.png") no-repeat;
+
+    position: absolute;
+    width: 7.5%;
+    left:-5%;
+    height: 0;
+    padding-bottom: 6%;
+    background-size: 100%;
+    animation:
+            flap infinite .1s alternate ease-in-out;
+}
+@keyframes flap {
+    0% {background: url('../img/bird/Blue Bird Wings UP.png') no-repeat;
+        background-size: 100%;
+    }
+    100% {background: url('../img/bird/Blue Bird Wings DOWN.png') no-repeat;
+        background-size: 100%;
+    }
+}
+
+/*@keyframes fly1 {*/
+    /*0% {*/
+    /*rotate(45deg);*/
+    /*top: 60%;*/
+    /*right: 0;*/
+    /*}*/
+
+    /*50% {*/
+        /*top: 20%;*/
+        /*right: 50%;*/
+    /*}*/
+
+    /*100% {*/
+    /*rotate(-45deg);*/
+    /*top: 60%;*/
+    /*right: 100%;*/
+    /*}*/
+
+/*}*/
+
+svg {
+    position: absolute;
+    left: 0;
+}
+
+
+.ball {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 20px;
+    bottom: 0;
+    left: calc(50% - 100px);
+    background-color: darkblue;
+    border-radius: 50%;
 }
