@@ -1,7 +1,28 @@
+body {
+    height: 100%;
+}
+
+
+.stars {
+    background: url("../img/background/Stars [Whole Canvas].png") no-repeat;
+    background-size: 100%;
+    width: 1024px;
+    height: 520px;
+    position: absolute;
+    animation: starDisapear 15s infinite alternate steps(15);
+}
+
+
+@keyframes starDisapear {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+}
+
 .background {
     background: url("../img/background/Cheesy Moon Sky.png") no-repeat;
-    width: 100%;
-    height: 100%;
+    background-size: 100%;
+    width: 1024px;
+    height: 520px;
     animation: day alternate 15s infinite;
 }
 
@@ -11,3 +32,48 @@
 }
 
 
+
+.spaceObject {
+    background: url("../img/background/White Moon.png") no-repeat;
+    background-size: 100%;
+    margin-top: 4%;
+    width: 1025px;
+    height: 649.5px;
+    position: absolute;
+    animation:
+        glow .5s infinite alternate,
+        move 7.5s infinite alternate linear;
+
+}
+
+@keyframes glow {
+    0% {opacity: 1;}
+    100% {opacity: .95;}
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0%);
+    }
+    25% {transform: translateY(0%);
+        background-image: url("../img/background/White Moon.png")
+    }
+    50% {
+        transform: translateY(75%);
+    }
+    75% {transform: translateY(0%);
+        background-image: url("../img/background/Sun.png");
+    }
+    100% {transform: translateY(0%);
+        background-image: url("../img/background/Sun.png")}
+}
+
+.trees {
+    background: url("../img/background/Trees Back.png") no-repeat;
+    background-size: 100%;
+    margin-top: 21%;
+    position: absolute;
+
+    width: 1024px;
+    height: 155px;
+}
