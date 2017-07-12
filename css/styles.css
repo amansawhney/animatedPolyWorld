@@ -24,6 +24,7 @@
 }
 
 .background {
+    position: relative;
     background: url("../img/background/Cheesy Moon Sky.png") no-repeat;
     background-size: 100%;
     width: 1024px;
@@ -43,7 +44,6 @@
 .spaceObject {
     background: url("../img/background/White Moon.png") no-repeat;
     background-size: 100%;
-    margin-top: 4%;
     width: 1025px;
     height: 649.5px;
     opacity: .9;
@@ -79,9 +79,9 @@
 .trees {
     background: url("../img/background/Trees Back.png") no-repeat;
     background-size: 100%;
-    margin-top: 21%;
     position: absolute;
-
+    position: absolute;
+    bottom: 0;
     width: 1024px;
     height: 155px;
 }
@@ -89,30 +89,31 @@
 .trees_middle {
     background: url("../img/background/Trees Middle.png") no-repeat;
     background-size: 100%;
-    margin-top: 20.75%;
     position: absolute;
     opacity: .7;
     width: 1024px;
     height: 179px;
+    position: absolute;
+    bottom: 0;
 }
 
 .trees_front {
     background: url("../img/background/Trees Outlined Shaded Front  _ Looped.png") no-repeat;
     background-size: 100%;
-    margin-top: 20%;
     position: absolute;
-
+    position: absolute;
+    bottom: 50px;
     width: 1024px;
     height: 149.5px;
 }
 
 .ground {
-    position: absolute;
     width: 1024px;
     height: 57.5px;
-    margin-top: 27%;
     background: url("../img/background/Ground Base Night.png") no-repeat;
     animation: ground 15s infinite ease-in-out;
+    position: absolute;
+    bottom: 0;
 }
 
 @keyframes ground {
