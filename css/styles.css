@@ -7,10 +7,16 @@ html, body {
 .vertical-center {
     min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
     min-height: 100vh; /* These two lines are counted as one :-)       */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -23,7 +29,14 @@ html, body {
     padding-bottom: 50%;
     background-size: 100%;
     position: absolute;
+    -webkit-animation: starDisapear 15s infinite alternate steps(15);
     animation: starDisapear 15s infinite alternate steps(15);
+}
+
+
+@-webkit-keyframes starDisapear {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
 }
 
 
@@ -40,7 +53,15 @@ html, body {
     height: 0;
     padding-bottom: 50%;
     background-size: 100%;
+    -webkit-animation: day alternate 7.5s infinite;
     animation: day alternate 7.5s infinite;
+}
+
+@-webkit-keyframes day {
+    0% {background: url("../img/background/Cheesy Moon Sky.png") no-repeat;}
+    25% {background: url("../img/background/Cheesy Moon Sky.png") no-repeat;}
+    50%{background: url("../img/background/Sunny Sky.png") no-repeat;}
+    100%{background: url("../img/background/Sunny Sky.png") no-repeat;}
 }
 
 @keyframes day {
@@ -59,6 +80,9 @@ html, body {
     padding-bottom: 63%;
     background-size: 100%;
     opacity: .9;
+    -webkit-animation:
+            glow 2s infinite alternate ease-in-out,
+            move 7.5s infinite alternate ease-in-out;
     animation:
             glow 2s infinite alternate ease-in-out,
             move 7.5s infinite alternate ease-in-out;
@@ -69,6 +93,21 @@ html, body {
 /*0% {opacity: 1;}*/
 /*100% {opacity: .85;}*/
 /*}*/
+
+@-webkit-keyframes move {
+    0% {
+    }
+    25% {
+        background-image: url("../img/background/White Moon.png")
+    }
+    50% {
+    }
+    75% {
+        background-image: url("../img/background/Sun.png");
+    }
+    100% {
+        background-image: url("../img/background/Sun.png")}
+}
 
 @keyframes move {
     0% {
@@ -123,6 +162,7 @@ html, body {
     height: 0;
     padding-bottom: 05.615234375%;
     background: url("../img/background/Ground Base Night.png") no-repeat;
+    -webkit-animation: ground 15s infinite ease-in-out;
     animation: ground 15s infinite ease-in-out;
     position: absolute;
     bottom: 0;
@@ -135,6 +175,20 @@ html, body {
     z-index: 9999;
     background-color: white;
     background-size: 100%;
+}
+
+@-webkit-keyframes ground {
+    0% {}
+    25% {
+        background-image: url("../img/background/Ground Base Night.png");
+    }
+    50% {}
+    75% {
+        background-image: url("../img/background/Ground Base Day.png");
+    }
+    100% {
+        background-image: url("../img/background/Ground Base Day.png");
+    }
 }
 
 @keyframes ground {
@@ -160,8 +214,18 @@ html, body {
     height: 0;
     padding-bottom: 6%;
     background-size: 100%;
+    -webkit-animation:
+            flap infinite .1s alternate ease-in-out;
     animation:
             flap infinite .1s alternate ease-in-out;
+}
+@-webkit-keyframes flap {
+    0% {background: url('../img/bird/Blue Bird Wings UP.png') no-repeat;
+        background-size: 100%;
+    }
+    100% {background: url('../img/bird/Blue Bird Wings DOWN.png') no-repeat;
+        background-size: 100%;
+    }
 }
 @keyframes flap {
     0% {background: url('../img/bird/Blue Bird Wings UP.png') no-repeat;
@@ -173,22 +237,22 @@ html, body {
 }
 
 /*@keyframes fly1 {*/
-    /*0% {*/
-    /*rotate(45deg);*/
-    /*top: 60%;*/
-    /*right: 0;*/
-    /*}*/
+/*0% {*/
+/*rotate(45deg);*/
+/*top: 60%;*/
+/*right: 0;*/
+/*}*/
 
-    /*50% {*/
-        /*top: 20%;*/
-        /*right: 50%;*/
-    /*}*/
+/*50% {*/
+/*top: 20%;*/
+/*right: 50%;*/
+/*}*/
 
-    /*100% {*/
-    /*rotate(-45deg);*/
-    /*top: 60%;*/
-    /*right: 100%;*/
-    /*}*/
+/*100% {*/
+/*rotate(-45deg);*/
+/*top: 60%;*/
+/*right: 100%;*/
+/*}*/
 
 /*}*/
 
@@ -205,14 +269,37 @@ svg {
     left: -10%;
     height: 0;
     padding-bottom: 50%;
+    -webkit-animation: cloud 7.5s infinite alternate,
+    moveCloudLeft 1s ease-in;
     animation: cloud 7.5s infinite alternate,
-               moveCloudLeft 1s ease-in;
+    moveCloudLeft 1s ease-in;
+}
+
+@-webkit-keyframes moveCloudLeft {
+    0% {left: -40%}
+    100% {left: -10%}
+
 }
 
 @keyframes moveCloudLeft {
     0% {left: -40%}
     100% {left: -10%}
 
+}
+
+@-webkit-keyframes cloud {
+    0% {
+    }
+    20% {
+        background-image: url("../img/cloud/Cloud Medium Night.png")
+    }
+    50% {
+    }
+    80% {
+        background-image: url("../img/cloud/Cloud Medium Day.png");
+    }
+    100% {
+        background-image: url("../img/cloud/Cloud Medium Day.png")}
 }
 
 @keyframes cloud {
