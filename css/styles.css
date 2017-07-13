@@ -75,20 +75,45 @@ html, body {
 /*0% {opacity: 1;}*/
 /*100% {opacity: .85;}*/
 /*}*/
-@keyframes move {
+@-webkit-keyframes move {
   0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
     transform: translate3d(0px, 0px, 0px); }
   25% {
     background-image: url("../img/background/White Moon.png");
+    -webkit-transform: translate3d(0px, 0px, 0px);
     transform: translate3d(0px, 0px, 0px); }
   50% {
     background-image: url("../img/background/White Moon.png");
+    -webkit-transform: translate3d(0px, 50%, 0px);
     transform: translate3d(0px, 50%, 0px); }
   75% {
     background-image: url("../img/background/Sun.png");
+    -webkit-transform: translate3d(0px, 0%, 0px);
     transform: translate3d(0px, 0%, 0px); }
   100% {
     background-image: url("../img/background/Sun.png");
+    -webkit-transform: translate3d(0px, 0%, 0px);
+    transform: translate3d(0px, 0%, 0px); } }
+@keyframes move {
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px); }
+  25% {
+    background-image: url("../img/background/White Moon.png");
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px); }
+  50% {
+    background-image: url("../img/background/White Moon.png");
+    -webkit-transform: translate3d(0px, 50%, 0px);
+    transform: translate3d(0px, 50%, 0px); }
+  75% {
+    background-image: url("../img/background/Sun.png");
+    -webkit-transform: translate3d(0px, 0%, 0px);
+    transform: translate3d(0px, 0%, 0px); }
+  100% {
+    background-image: url("../img/background/Sun.png");
+    -webkit-transform: translate3d(0px, 0%, 0px);
     transform: translate3d(0px, 0%, 0px); } }
 .trees {
   background: url("../img/background/Trees Back.png") no-repeat;
@@ -162,12 +187,15 @@ html, body {
   height: 0;
   padding-bottom: 6%;
   background-size: 100%;
+  -webkit-animation: flap infinite .1s alternate ease-in-out;
   animation: flap infinite .1s alternate ease-in-out; }
 
 .bird_1 {
+  -webkit-animation: parabola infinite 16s linear reverse;
   animation: parabola infinite 16s linear reverse; }
 
 .bird_2 {
+  -webkit-animation: dumbMove infinite 20s linear;
   animation: dumbMove infinite 20s linear; }
 
 @keyframes flap {
@@ -177,17 +205,87 @@ html, body {
   100% {
     background: url("../img/bird/Blue Bird Wings DOWN.png") no-repeat;
     background-size: 100%; } }
-@keyframes dumbMove {
+@-webkit-keyframes flap {
   0% {
+    background: url("../img/bird/Blue Bird Wings UP.png") no-repeat;
+    background-size: 100%; }
+  100% {
+    background: url("../img/bird/Blue Bird Wings DOWN.png") no-repeat;
+    background-size: 100%; } }
+@-webkit-keyframes dumbMove {
+  0% {
+    -webkit-transform: translate(0%, 200%) rotate(720deg);
     transform: translate(0%, 200%) rotate(720deg);
     opacity: 1; }
   60% {
+    -webkit-transform: translate(1333%, 200%) rotate(-720deg);
     transform: translate(1333%, 200%) rotate(-720deg);
     opacity: 1; }
   61% {
     opacity: 0; }
   100% {
     opacity: 0; } }
+@keyframes dumbMove {
+  0% {
+    -webkit-transform: translate(0%, 200%) rotate(720deg);
+    transform: translate(0%, 200%) rotate(720deg);
+    opacity: 1; }
+  60% {
+    -webkit-transform: translate(1333%, 200%) rotate(-720deg);
+    transform: translate(1333%, 200%) rotate(-720deg);
+    opacity: 1; }
+  61% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+@-webkit-keyframes parabola {
+  1% {
+    transform: translate(0%, -6.665%) rotate(257.14286deg);
+    opacity: 1; }
+  2.42857% {
+    transform: translate(95.21429%, -93.31%) rotate(244.28571deg);
+    opacity: 1; }
+  3.85714% {
+    transform: translate(190.42857%, -166.625%) rotate(231.42857deg);
+    opacity: 1; }
+  5.28571% {
+    transform: translate(285.64286%, -226.61%) rotate(218.57143deg);
+    opacity: 1; }
+  6.71429% {
+    transform: translate(380.85714%, -273.265%) rotate(205.71429deg);
+    opacity: 1; }
+  8.14286% {
+    transform: translate(476.07143%, -306.59%) rotate(192.85714deg);
+    opacity: 1; }
+  9.57143% {
+    transform: translate(571.28571%, -326.585%) rotate(180deg);
+    opacity: 1; }
+  11.42857% {
+    transform: translate(761.71429%, -239.94%) rotate(0deg);
+    opacity: 1; }
+  12.85714% {
+    transform: translate(856.92857%, -166.625%) rotate(12.85714deg);
+    opacity: 1; }
+  14.28571% {
+    transform: translate(952.14286%, -106.64%) rotate(25.71429deg);
+    opacity: 1; }
+  15.71429% {
+    transform: translate(1047.35714%, -59.985%) rotate(38.57143deg);
+    opacity: 1; }
+  17.14286% {
+    transform: translate(1142.57143%, -26.66%) rotate(51.42857deg);
+    opacity: 1; }
+  18.57143% {
+    transform: translate(1237.78571%, -6.665%) rotate(64.28571deg);
+    opacity: 1; }
+  20% {
+    transform: translate(1333%, 0%) rotate(77.14286deg);
+    opacity: 1; }
+  21% {
+    opacity: 0; }
+  99% {
+    opacity: 0;
+    transform: rotate(-180deg); } }
 @keyframes parabola {
   1% {
     transform: translate(0%, -6.665%) rotate(257.14286deg);

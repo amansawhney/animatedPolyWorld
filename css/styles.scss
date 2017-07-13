@@ -1,83 +1,83 @@
 html, body {
-    width:100%;
-    position:relative;
-    background-color: white;
+  width:100%;
+  position:relative;
+  background-color: white;
 }
 
 .vertical-center {
-    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-    min-height: 100vh; /* These two lines are counted as one :-)       */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 
 .stars {
-    background: url("../img/background/Stars [Whole Canvas].png") no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 0;
-    padding-bottom: 50%;
-    background-size: 100%;
-    position: absolute;
-    -webkit-animation: starDisapear 15s infinite alternate steps(15);
-    animation: starDisapear 15s infinite alternate steps(15);
+  background: url("../img/background/Stars [Whole Canvas].png") no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  background-size: 100%;
+  position: absolute;
+  -webkit-animation: starDisapear 15s infinite alternate steps(15);
+  animation: starDisapear 15s infinite alternate steps(15);
 }
 
 
 @-webkit-keyframes starDisapear {
-    0% {opacity: 1;}
-    50% {opacity: 0;}
+  0% {opacity: 1;}
+  50% {opacity: 0;}
 }
 
 
 @keyframes starDisapear {
-    0% {opacity: 1;}
-    50% {opacity: 0;}
+  0% {opacity: 1;}
+  50% {opacity: 0;}
 }
 
 .background {
-    background: url("../img/background/Cheesy Moon Sky.png") no-repeat;
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 50%;
-    background-size: 100%;
-    -webkit-animation: day alternate 7.5s infinite;
-    animation: day alternate 7.5s infinite;
+  background: url("../img/background/Cheesy Moon Sky.png") no-repeat;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  background-size: 100%;
+  -webkit-animation: day alternate 7.5s infinite;
+  animation: day alternate 7.5s infinite;
 }
 
 @-webkit-keyframes day {
-    0% {background: url("../img/background/Cheesy Moon Sky.png") no-repeat;}
-    25% {background: url("../img/background/Cheesy Moon Sky.png") no-repeat;}
-    50%{background: url("../img/background/Sunny Sky.png") no-repeat;}
-    100%{background: url("../img/background/Sunny Sky.png") no-repeat;}
+  0% {background: url("../img/background/Cheesy Moon Sky.png") no-repeat;}
+  25% {background: url("../img/background/Cheesy Moon Sky.png") no-repeat;}
+  50%{background: url("../img/background/Sunny Sky.png") no-repeat;}
+  100%{background: url("../img/background/Sunny Sky.png") no-repeat;}
 }
 
 
 .spaceObject {
-    background: url("../img/background/White Moon.png") no-repeat;
-    width: 100%;
-    height: 0;
-    padding-bottom: 63%;
-    background-size: 100%;
-    opacity: .9;
-    -webkit-animation:
-            glow 2s infinite alternate ease-in-out,
-            move 7.5s infinite alternate ease-in-out;
-    animation:
-            glow 2s infinite alternate ease-in-out,
-            move 7.5s infinite alternate ease-in-out;
+  background: url("../img/background/White Moon.png") no-repeat;
+  width: 100%;
+  height: 0;
+  padding-bottom: 63%;
+  background-size: 100%;
+  opacity: .9;
+  -webkit-animation:
+          glow 2s infinite alternate ease-in-out,
+          move 7.5s infinite alternate ease-in-out;
+  animation:
+          glow 2s infinite alternate ease-in-out,
+          move 7.5s infinite alternate ease-in-out;
 
 }
 
@@ -86,141 +86,189 @@ html, body {
 /*100% {opacity: .85;}*/
 /*}*/
 
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+  }
+  25% {
+    background-image: url("../img/background/White Moon.png");
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+  }
+  50% {
+    background-image: url("../img/background/White Moon.png");
+    -webkit-transform: translate3d(0px, 50%, 0px);
+    transform: translate3d(0px, 50%, 0px);
+  }
+  75% {
+    background-image: url("../img/background/Sun.png");
+    -webkit-transform: translate3d(0px, 0%, 0px);
+    transform: translate3d(0px, 0%, 0px);
+  }
+  100% {
+    background-image: url("../img/background/Sun.png");
+    -webkit-transform: translate3d(0px, 0%, 0px);
+    transform: translate3d(0px, 0%, 0px);
+  }
+
+}
+
 @keyframes move {
-    0% {
-        transform: translate3d(0px, 0px, 0px);
-    }
-    25% {
-        background-image: url("../img/background/White Moon.png");
-        transform: translate3d(0px, 0px, 0px);
-    }
-    50% {
-        background-image: url("../img/background/White Moon.png");
-        transform: translate3d(0px, 50%, 0px);
-    }
-    75% {
-        background-image: url("../img/background/Sun.png");
-        transform: translate3d(0px, 0%, 0px);
-    }
-    100% {
-        background-image: url("../img/background/Sun.png");
-        transform: translate3d(0px, 0%, 0px);
-    }
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+  }
+  25% {
+    background-image: url("../img/background/White Moon.png");
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+  }
+  50% {
+    background-image: url("../img/background/White Moon.png");
+    -webkit-transform: translate3d(0px, 50%, 0px);
+    transform: translate3d(0px, 50%, 0px);
+  }
+  75% {
+    background-image: url("../img/background/Sun.png");
+    -webkit-transform: translate3d(0px, 0%, 0px);
+    transform: translate3d(0px, 0%, 0px);
+  }
+  100% {
+    background-image: url("../img/background/Sun.png");
+    -webkit-transform: translate3d(0px, 0%, 0px);
+    transform: translate3d(0px, 0%, 0px);
+  }
 
 }
 
 
 .trees {
-    background: url("../img/background/Trees Back.png") no-repeat;
-    background-size: 100%;
-    position: absolute;
-    position: absolute;
-    bottom: 50px;
-    width: 100%;
-    height: 0;
-    padding-bottom: 14.06%;
+  background: url("../img/background/Trees Back.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 14.06%;
 }
 
 .trees_middle {
-    background: url("../img/background/Trees Middle.png") no-repeat;
-    background-size: 100%;
-    position: absolute;
-    opacity: .7;
-    width: 100%;
-    height: 0;
-    padding-bottom: 17.4804%;
-    bottom: 0;
+  background: url("../img/background/Trees Middle.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  opacity: .7;
+  width: 100%;
+  height: 0;
+  padding-bottom: 17.4804%;
+  bottom: 0;
 }
 
 .trees_front {
-    background: url("../img/background/Trees Outlined Shaded Front  _ Looped.png") no-repeat;
-    background-size: 100%;
-    position: absolute;
-    position: absolute;
-    bottom: 50px;
-    width: 100%;
-    height: 0;
-    padding-bottom: 14.5996%;
+  background: url("../img/background/Trees Outlined Shaded Front  _ Looped.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 14.5996%;
 }
 
 .ground {
-    width: 100%;
-    height: 0;
-    padding-bottom: 05.615234375%;
-    background: url("../img/background/Ground Base Night.png") no-repeat;
-    -webkit-animation: ground 15s infinite ease-in-out;
-    animation: ground 15s infinite ease-in-out;
-    position: absolute;
-    bottom: 0;
+  width: 100%;
+  height: 0;
+  padding-bottom: 05.615234375%;
+  background: url("../img/background/Ground Base Night.png") no-repeat;
+  -webkit-animation: ground 15s infinite ease-in-out;
+  animation: ground 15s infinite ease-in-out;
+  position: absolute;
+  bottom: 0;
 }
 .bottom {
-    height: 100000px;
-    width: 100%;
-    bottom: -99990px;
-    position:absolute;
-    z-index: 9999;
-    background-color: white;
-    background-size: 100%;
+  height: 100000px;
+  width: 100%;
+  bottom: -99990px;
+  position:absolute;
+  z-index: 9999;
+  background-color: white;
+  background-size: 100%;
 }
 
 @-webkit-keyframes ground {
-    0% {}
-    25% {
-        background-image: url("../img/background/Ground Base Night.png");
-    }
-    50% {}
-    75% {
-        background-image: url("../img/background/Ground Base Day.png");
-    }
-    100% {
-        background-image: url("../img/background/Ground Base Day.png");
-    }
+  0% {}
+  25% {
+    background-image: url("../img/background/Ground Base Night.png");
+  }
+  50% {}
+  75% {
+    background-image: url("../img/background/Ground Base Day.png");
+  }
+  100% {
+    background-image: url("../img/background/Ground Base Day.png");
+  }
 }
 
 @keyframes ground {
-    0% {}
-    25% {
-        background-image: url("../img/background/Ground Base Night.png");
-    }
-    50% {}
-    75% {
-        background-image: url("../img/background/Ground Base Day.png");
-    }
-    100% {
-        background-image: url("../img/background/Ground Base Day.png");
-    }
+  0% {}
+  25% {
+    background-image: url("../img/background/Ground Base Night.png");
+  }
+  50% {}
+  75% {
+    background-image: url("../img/background/Ground Base Day.png");
+  }
+  100% {
+    background-image: url("../img/background/Ground Base Day.png");
+  }
 }
 
 .bird {
-    display: block;
+  display: block;
   position: absolute;
-    background: url("../img/bird/Blue Bird Wings UP.png") no-repeat;
-    width: 7.5%;
-    left: 0%;
-    height: 0;
-    padding-bottom: 6%;
-    background-size: 100%;
-    animation: flap infinite .1s alternate ease-in-out;
+  background: url("../img/bird/Blue Bird Wings UP.png") no-repeat;
+  width: 7.5%;
+  left: 0%;
+  height: 0;
+  padding-bottom: 6%;
+  background-size: 100%;
+  -webkit-animation: flap infinite .1s alternate ease-in-out;
+  animation: flap infinite .1s alternate ease-in-out;
 
 }
 
 .bird_1 {
+  -webkit-animation: parabola infinite 16s linear reverse;
   animation: parabola infinite 16s linear reverse;
 }
 .bird_2 {
+  -webkit-animation: dumbMove infinite 20s linear;
   animation: dumbMove infinite 20s linear;
 }
 @keyframes flap {
-    0% {background: url('../img/bird/Blue Bird Wings UP.png') no-repeat;
-        background-size: 100%;
-    }
-    100% {background: url('../img/bird/Blue Bird Wings DOWN.png') no-repeat;
-        background-size: 100%;
-    }
+  0% {background: url('../img/bird/Blue Bird Wings UP.png') no-repeat;
+    background-size: 100%;
+  }
+  100% {background: url('../img/bird/Blue Bird Wings DOWN.png') no-repeat;
+    background-size: 100%;
+  }
+}
+@-webkit-keyframes flap {
+  0% {background: url('../img/bird/Blue Bird Wings UP.png') no-repeat;
+    background-size: 100%;
+  }
+  100% {background: url('../img/bird/Blue Bird Wings DOWN.png') no-repeat;
+    background-size: 100%;
+  }
 }
 
-@keyframes dumbMove {
+
+@-webkit-keyframes dumbMove {
   0% {
+
+    -webkit-transform: translate(0%, 200%)
+    rotate(720deg);
 
     transform: translate(0%, 200%)
     rotate(720deg);
@@ -228,6 +276,8 @@ html, body {
   }
 
   60%{
+    -webkit-transform: translate(1333%, 200%)
+    rotate(-720deg);
     transform: translate(1333%, 200%)
     rotate(-720deg);
     opacity: 1;
@@ -239,8 +289,45 @@ html, body {
     opacity: 0;
   }
 
-}
-@keyframes parabola {
+}@keyframes dumbMove {
+   0% {
+
+     -webkit-transform: translate(0%, 200%)
+     rotate(720deg);
+
+     transform: translate(0%, 200%)
+     rotate(720deg);
+     opacity: 1;
+   }
+
+   60%{
+     -webkit-transform: translate(1333%, 200%)
+     rotate(-720deg);
+     transform: translate(1333%, 200%)
+     rotate(-720deg);
+     opacity: 1;
+   }
+   61% {
+     opacity: 0;
+   }
+   100% {
+     opacity: 0;
+   }
+
+ }
+
+@-webkit-keyframes parabola {
+  @for $i from 7 through 1 {
+    #{10 - $i * 1% * 2.8571428571/2 + 1}{transform: translate((666.5-$i*7.1428571429*13.33%), (-(50*13.33-$i*$i*1% *13.33))/2) rotate(90+ 180+(8-$i)*-25.7142857143*.5deg); opacity: 1; }
+  }
+  @for $i from 7 through 1 {
+    #{10 + (8-$i) * 1% * 2.8571428571/2}{transform: translate((666.5+(8-$i)*7.1428571429*13.33%), (-(($i - 1)*($i - 1)*1% *13.33))/2) rotate(-90+ 180+$i*-25.7142857143*.5deg); opacity: 1;}
+
+  }
+  21% {opacity: 0;}
+  99% {opacity: 0;
+    transform: rotate(-180deg);}
+}@keyframes parabola {
   @for $i from 7 through 1 {
     #{10 - $i * 1% * 2.8571428571/2 + 1}{transform: translate((666.5-$i*7.1428571429*13.33%), (-(50*13.33-$i*$i*1% *13.33))/2) rotate(90+ 180+(8-$i)*-25.7142857143*.5deg); opacity: 1; }
   }
